@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import React from "react";
 
 const Detail = async ({
@@ -6,6 +7,7 @@ const Detail = async ({
   params: Promise<{ productsId: string }>;
 }) => {
   const productId = (await params).productsId;
+
   return <div> Details about the product {productId}</div>;
 };
 
