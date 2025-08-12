@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 
+//generate dynamic metadata
 export async function generateMetadata({
   params,
 }: {
