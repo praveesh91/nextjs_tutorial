@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import React from "react";
 
 //generate dynamic metadata
@@ -15,7 +16,17 @@ export async function generateMetadata({
 
 const Detail = ({ params }: { params: { productsId: string } }) => {
   const productId = params.productsId;
-  return <div>Details about the product {productId}</div>;
+  return (
+    <div>
+      <h3 className="text-3xl font-bold">
+        {" "}
+        Details about the product {productId}
+      </h3>
+      <Link className="text-blue-400" href={`/products/${productId}/reviews/1`}>
+        Review
+      </Link>
+    </div>
+  );
 };
 
 export default Detail;

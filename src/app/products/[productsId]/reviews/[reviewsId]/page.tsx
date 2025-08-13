@@ -11,7 +11,7 @@ const ReviewDetail = async ({
     notFound();
   }
   return (
-    <div>
+    <div className="text-2xl font-medium">
       Review {reviewsId} Product {productsId}
     </div>
   );
