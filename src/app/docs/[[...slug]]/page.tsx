@@ -1,6 +1,6 @@
 import React from "react";
 
-const Docs = async ({ params }: { params: Promise<{ slug: string[] }> }) => {
+const Docs = async ({ params }: { params: { slug: string[] } }) => {
   const { slug } = await params;
 
   if (slug.length === 1) {

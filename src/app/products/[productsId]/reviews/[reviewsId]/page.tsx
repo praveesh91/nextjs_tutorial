@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import React from "react";
 
-const ReviewDetail = ({
+const ReviewDetail = async ({
   params,
 }: {
   params: { reviewsId: string; productsId: string };
 }) => {
-  const { reviewsId, productsId } = params;
+  const { reviewsId, productsId } = await params;
   if (parseInt(reviewsId) > 500) {
     notFound();
   }
